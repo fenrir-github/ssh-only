@@ -1,7 +1,7 @@
 # fenrir/ssh-only
 # Debian stretch-slim+ssh
 #
-# VERSION 0.0.1
+# VERSION 0.0.2
 #
 FROM debian:stretch-slim
 MAINTAINER Fenrir <dont@want.spam>
@@ -12,10 +12,12 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN	echo 'APT::Install-Suggests "false";' > /etc/apt/apt.conf &&\
 	echo 'APT::Install-Recommends "false";' >> /etc/apt/apt.conf &&\
 	echo 'Aptitude::Recommends-Important "false";' >> /etc/apt/apt.conf &&\
-	echo 'Aptitude::Suggests-Important "false";' >> /etc/apt/apt.conf
-
+	echo 'Aptitude::Suggests-Important "false";' >> /etc/apt/apt.conf &&\
 # Install packages
-RUN apt-get update && apt-get install -y -q ssh
+	apt-get update && apt-get install -y -q ssh &&\
+	apt-get autoclean &&\
+	apt-get clean &&\
+	rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*.deb /tmp/* /var/tmp/*
 
 # Configure ssh
 RUN mkdir /var/run/sshd &&\
