@@ -1,7 +1,7 @@
 # fenrir/ssh-only
 # Debian stretch-slim+ssh
 #
-# VERSION 0.0.2
+# VERSION 0.0.3
 #
 FROM debian:stretch-slim
 MAINTAINER Fenrir <dont@want.spam>
