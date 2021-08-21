@@ -1,9 +1,9 @@
 # fenrir/ssh-only
-# Debian stretch-slim+ssh
+# Debian buster-slim+ssh
 #
-# VERSION 0.0.3
+# VERSION 1.0.0
 #
-FROM debian:stretch-slim
+FROM debian:buster-slim
 MAINTAINER Fenrir <dont@want.spam>
 
 ENV DEBIAN_FRONTEND noninteractive
