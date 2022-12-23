@@ -1,7 +1,7 @@
 # fenrir/ssh-only
 # Debian buster-slim+ssh
 #
-# VERSION 11.0.0
+# VERSION 11.6.0
 #
 FROM debian:bullseye-slim
 MAINTAINER Fenrir <dont@want.spam>
