@@ -1,6 +1,6 @@
 # ssh-only docker
 
-Start container: `docker run --rm --name ssh -p 222:22 fenrir/ssh-only`
+Start container: `docker run --rm --name ssh -p 2222:22 fenrir/ssh-only`
 
 Stop container: `kill 1`
 
