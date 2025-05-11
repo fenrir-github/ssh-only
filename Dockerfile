@@ -1,10 +1,10 @@
 # fenrir/ssh-only
 # Debian buster-slim+ssh
 #
-# VERSION 12.0.0
+# VERSION 12.0.1
 #
 FROM debian:12-slim
-MAINTAINER Fenrir <dont@want.spam>
+LABEL org.opencontainers.image.authors="dont@want.spam.invalid"
 
 ENV     DEBIAN_FRONTEND noninteractive
 
